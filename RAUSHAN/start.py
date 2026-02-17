@@ -32,7 +32,7 @@ async def start(bot: Client, msg: Message):
                 ],
                 [
                     InlineKeyboardButton("🔸 sᴏᴜʀᴄᴇ 🔸", url="https://github.com/TEAMPURVI/PURVI_STRING"),
-                    InlineKeyboardButton("▫️ᴍᴜsɪᴄ ʙᴏᴛ▫️", url="https://t.me/SonaliMusicBot")
+                    InlineKeyboardButton("▫️ᴍᴜsɪᴄ ʙᴏᴛ▫️", url="https://t.me/Shivixvcbot")
                 ]                
             ]
         )
