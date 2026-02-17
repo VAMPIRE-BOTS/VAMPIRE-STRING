@@ -3,7 +3,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 from config import OWNER_ID
 
-
 def filter(cmd: str):
     return filters.private & filters.incoming & filters.command(cmd)
 
