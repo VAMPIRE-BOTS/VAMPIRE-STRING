@@ -24,7 +24,7 @@ async def start(bot: Client, msg: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="▪ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ▪️", callback_data="generate")
+                    InlineKeyboardButton(text="˹ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ˼", callback_data="generate")
                 ],
                 [
                     InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/VAMPIREUPDATES"),
