@@ -10,4 +10,4 @@ BOT_TOKEN = getenv("BOT_TOKEN", None)
 OWNER_ID = int(getenv("OWNER_ID", "7403621976"))
 
 MONGO_DB_URI = getenv("mongodb+srv://vivek:1234567890@cluster0.c48d8ih.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-MUST_JOIN = getenv("MUST_JOIN", "ALPHA_SAYS")
+MUST_JOIN = getenv("MUST_JOIN", "VAMPIREUPDATES")
