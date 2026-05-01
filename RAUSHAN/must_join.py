@@ -13,14 +13,21 @@ async def must_join_channel(bot: Client, msg: Message):
         try:
             await bot.get_chat_member(MUST_JOIN, msg.from_user.id)
         except UserNotParticipant:
-            if MUST_JOIN.VAMPIREUPDATES():
-                link = "https://t.me/" + MUST_JOIN
+            # 🔥 LINK FIX
+            if str(MUST_JOIN).startswith("@"):
+                link = f"https://t.me/{MUST_JOIN.replace('@','')}"
             else:
                 chat_info = await bot.get_chat(MUST_JOIN)
                 link = chat_info.invite_link
+
+                # अगर invite link None आया तो नया बना लो
+                if not link:
+                    link = await bot.export_chat_invite_link(MUST_JOIN)
+
             try:
                 await msg.reply_photo(
-                    photo="https://i.ibb.co/N2rCpDHD/x.jpg", caption=f"✦ » ғɪʀsᴛʟʏ ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ғᴀᴍɪʟʏ ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ [˹ ᴏꜰꜰɪᴄᴇ ˼]({link}). ᴀғᴛᴇʀ ᴊᴏɪɴ ❖ /start ❖ ᴍᴇ ᴀɢᴀɪɴ 🌹!",
+                    photo="https://i.ibb.co/N2rCpDHD/x.jpg",
+                    caption=f"✦ » ғɪʀsᴛʟʏ ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ғᴀᴍɪʟʏ ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ [˹ ᴏꜰꜰɪᴄᴇ ˼]({link}). ᴀғᴛᴇʀ ᴊᴏɪɴ ❖ /start ❖ ᴍᴇ ᴀɢᴀɪɴ 🌹!",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
